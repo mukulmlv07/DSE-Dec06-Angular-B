@@ -1,0 +1,51 @@
+query getAllUsers	{
+  users{
+    id
+    name
+    surname
+    email
+  }
+}
+
+query getAllQuotes	{
+
+  quotes{
+    name
+    by
+  }
+}
+
+users{
+  name,
+  quotes{
+    by
+    name
+  }
+}
+}
+
+
+{
+  user(id:"01"){
+    name
+  }
+  
+}
+
+query quoteById{
+  quote(by:"02"){
+    name
+  }
+}
+
+query quoteById($userid:ID!){
+  quote(by:$userid){
+    name
+  }
+}
+
+mutation addQuote($quote:QuoteInput){
+  addQuote(newQuote:$quote){
+    name
+  }
+}
