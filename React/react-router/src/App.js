@@ -18,6 +18,8 @@ import AuthRequired from "./components/AuthRequired";
 const LazyAbout = React.lazy(() => import("./components/About"));
 
 function App() {
+ 
+
   return (
     <>
       <AuthProvider>

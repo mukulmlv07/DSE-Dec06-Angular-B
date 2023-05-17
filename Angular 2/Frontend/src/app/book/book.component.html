@@ -1,0 +1,93 @@
+<!-- <h2>My Books</h2>
+<ul class="books">
+  <li *ngFor="let book of books">
+    <span class="badge">{{book.id}}</span> {{book.name}}
+  </li>
+</ul>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div> -->
+
+
+<h2>{{ title1 }}</h2>
+<h2>My Books</h2>
+<ul class="books">
+  <li *ngFor="let book of books">
+    <span class="badge">{{ book.id }}</span> {{ book.name }}
+  </li>
+</ul>
+<button class="btn btn-primary" (click)="ADD_BOOK = true">Add Book</button>&nbsp;
+<button class="btn btn-primary" (click)="UPDATE_BOOK = true">Update Book</button>&nbsp;
+<button class="btn btn-primary" (click)="DELETE_BOOK = true">Delete Book</button>
+<br />
+<div *ngIf="ADD_BOOK">
+  <table>
+    <tr>
+      <td>Enter Id of the book:</td>
+      <td>
+        <input type="number" #id />
+      </td>
+    </tr>
+    <br />
+    <tr>
+      <td>Enter Name of the Book:</td>
+      <td>
+        <input type="text" #name />
+        <br />
+      </td>
+    </tr>
+    <br />
+    <tr>
+      <td>
+        <button class="btn btn-primary" (click)="addBook(id.value, name.value); ADD_BOOK = false">
+          Add Record
+        </button>
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+<div *ngIf="UPDATE_BOOK">
+  <table>
+    <tr>
+      <td>Enter Id of the book:</td>
+      <td>
+        <input type="number" #id />
+      </td>
+    </tr>
+    <br />
+    <tr>
+      <td>Enter Name of the Book:</td>
+      <td>
+        <input type="text" #name />
+        <br />
+      </td>
+    </tr>
+    <br />
+    <tr>
+      <td>
+        <button class="btn btn-primary" (click)="updateBook(id.value, name.value); UPDATE_BOOK = false">
+          Update Record
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+<br />
+<div *ngIf="DELETE_BOOK">
+  <table>
+    <tr>
+      <td>Enter Id of the book:</td>
+      <td>
+        <input type="number" #id />
+      </td>
+    </tr>
+    <br />
+    <tr>
+      <td>
+        <button class="btn btn-primary" (click)="deleteBook(id.value); DELETE_BOOK = false">
+          Delete Record
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>

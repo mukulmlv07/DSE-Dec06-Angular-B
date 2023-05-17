@@ -6,7 +6,7 @@ function Home() {
   const navigate=useNavigate()
  
   return <>
-    <button onClick={()=>navigate('galary')}>
+    <button onClick={()=>navigate('/galary')}>
       GO TO Galary
     </button>
     

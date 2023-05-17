@@ -1,0 +1,17 @@
+<h1>{{errormsg}}</h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of employee">
+      <tr>
+        <th scope="row">{{emp.id}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+      </tr>
+    </tbody>
+  </table>

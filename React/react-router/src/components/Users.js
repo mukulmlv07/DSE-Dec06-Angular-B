@@ -10,7 +10,7 @@ function Users() {
   return (
     <>
       <div>
-        <h3 onClick={()=>{navigate(':userId')}}>user1</h3>
+        <h3 onClick={()=>{navigate(':1')}}>user1</h3>
         <h3 >user2</h3>
 
         <h3>user3</h3>

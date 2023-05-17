@@ -7,7 +7,8 @@ function Login() {
   const location=useLocation()
   const redirectURL=location.state?.path || '/'
   const auth=useAuth()
-  const navigate=useNavigate()
+  const navigate = useNavigate()
+  console.log(navigate)
   const loginHandler=()=>{
     auth.login(user)
     navigate(redirectURL,{replace:true})
